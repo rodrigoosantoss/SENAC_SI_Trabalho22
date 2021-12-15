@@ -1,0 +1,18 @@
+<h2>Lista de usuários cadastrados.</h2>
+
+<table *ngIf="responseUsers">
+    <thead>
+        <td>Nome</td>
+        <td>SobreNome</td>
+        <td>E-mail</td>
+        <td>...</td>
+    </thead>
+    <tbody>
+        <tr *ngFor="let usuarios of responseUsers.data">
+            <td>{{usuarios.nome}}</td>
+            <td>{{usuarios.sobrenome}}</td>
+            <td>{{usuarios.email}}</td>
+            
+        </tr>
+    </tbody>
+</table>

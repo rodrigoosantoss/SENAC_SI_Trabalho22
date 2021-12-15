@@ -1,0 +1,23 @@
+<section id="form" class="form">
+    <h2>Formulário de cadastro</h2>
+    <div class="form-c">
+        <form id="formulario">
+            <label>digite seu nome</label>
+            <input type="text" name="nome" id="nome" placeholder="Seu nome!" [(ngModel)]="request.nome" required />
+            <label>sobrenome</label>
+            <input type="text" name="sobrenome" id="sobrenome" placeholder="sobreNome!" [(ngModel)]="request.sobrenome" required />
+            <label>Digite seu e-mail</label>
+            <input type="email" name="email" id="email" placeholder="Seu melhor email!" [(ngModel)]="request.email" required />
+
+            <button (click)="save()" id="enviar">Gravar</button>
+            <button type="reset" name="limpar" id="apagar" value="limpar">limpar</button>
+        </form>
+    </div>
+</section>
+
+
+<div *ngIf="response">
+    <h3>Criado com sucesso</h3>
+    
+</div>
+
